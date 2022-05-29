@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+  <ion-title>{{userdetails.name}}</ion-title>
+  <ion-buttons end>
+
+  <button class="footer-send-button" ion-button clear type="submit" (click)="gochat()"><ion-icon name="ios-send" style="zoom:2.0;"></ion-icon></button>
+
+  </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <div class="card">
+    <img *ngIf="userdetails.photo == '' || userdetails.photo==null" src="../../assets/imgs/pp.jpg"  style="width:100%">
+    <img *ngIf="userdetails.photo != '' && userdetails.photo!=null" src="https://easycash.ng/uploads/userphotos/{{userdetails.photo}}"  style="width:100%">
+    <h1>{{userdetails.name}}</h1>
+    <p class="title">{{userdetails.phone}}</p>
+    <p>{{userdetails.email}}</p>
+    <p><button class="button-send-request" *ngIf="userdetails.count_request == 0" ion-button color="primary">Send your request</button>
+      <button  class="button-send-request" *ngIf="userdetails.count_request != 0"ion-button color="primary">Already sent your request</button></p>
+  </div>
+</ion-content>

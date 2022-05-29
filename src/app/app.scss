@@ -1,0 +1,80 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.custom-popover .popover-content{
+  top: 300px !important;
+  width: 90% !important;
+  left: 5% !important;
+  height: 215px !important;
+  .popover-arrow{
+    display: none !important;
+  }
+};
+
+.country-dropdown .popover-content{
+  top: 44px !important;
+  .popover-arrow{
+    display: none !important;
+  }
+}
+
+
+.customotp-popover .popover-content{
+  width: 90% !important;
+  left: 5% !important;
+  height: 200px !important;
+
+  .popover-arrow{
+    display: none !important;
+  }
+};
+
+// custom icons
+ion-icon {
+  &[class*="appicons"] {
+      // Instead of using the font-based icons
+      // We're applying SVG masks
+      mask-size: contain;
+      mask-position: 50% 50%;
+      mask-repeat: no-repeat;
+      background: currentColor;
+      width: 1em;
+      height: 1em;
+  }
+  // custom icons
+  &[class*="appicons-success"] {
+      mask-image: url(./assets/icon/success.svg);
+  }
+  &[class*="appicons-home"] {
+    mask-image: url(../assets/icon/12.png);
+}
+&[class*="appicons-map"] {
+  mask-image: url(../assets/icon/13.png);
+}
+&[class*="appicons-wallet"] {
+  mask-image: url(../assets/icon/14.png);
+}
+&[class*="appicons-settings"] {
+  mask-image: url(../assets/icon/15.png);
+}
+}
+
+
+.back{
+  height: 20px;
+
+}

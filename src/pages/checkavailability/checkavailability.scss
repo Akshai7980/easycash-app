@@ -1,0 +1,56 @@
+page-checkavailability {
+.toolbar-title{
+  text-align: center !important;
+  color: white !important;
+  font-size: 15px;
+}
+.toolbar-background{
+  background: #488aff !important;
+}
+
+.Bg{
+  background-image: url("../assets/imgs/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+
+.proceed{
+  height: 75px;
+  width: auto;
+  margin-top: 15px;
+}
+
+.GreenLight{
+  height: 100px;
+  width: 100px;
+}
+
+.AvailText{
+  font-size: 20px !important;
+  color: white;
+}
+
+.AmtAvail{
+    text-align: center;
+    padding-top: 120px;
+    width: 80%;
+    margin: auto;
+}
+
+.CheckA{
+  background-color: white;
+  width: 75%;
+  height: 45px;
+  margin: auto;
+
+}
+
+.AboveTxt{
+  text-align: left;
+  padding-left: 40px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 15px;
+}
+}

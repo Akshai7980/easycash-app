@@ -1,0 +1,187 @@
+page-register {
+.regheader{
+    background-color: #64a4e4;
+}
+.toolbar-background-ios {
+    background: none;
+}
+.regtxt{
+    color: white;
+}
+
+
+.btn1 .activated{
+    background-color: transparent !important;
+}
+.toolbar-title {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+    pointer-events: auto;
+    margin-right: 15%;
+}
+.select .select-icon .select-icon-inner
+{
+    color :#000 !important;
+}
+.regcontent{
+    background-image: url("../assets/imgs/3.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.logoimg{
+    width: 148px;
+    height: 30px;
+    margin-top: 40px;
+
+}
+.position
+{
+    margin: auto;
+    text-align: center;
+}
+.item-block {
+    margin: auto;
+    padding: 0;
+    text-align: initial;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 76%;
+    min-height: 4.4rem;
+    border: 0;
+    font-weight: normal;
+    line-height: normal;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 10px;
+
+}
+.account-label {
+    padding-left: 0px;
+    color: white !important;
+    font-size: 15px;
+}
+.select-ios .select-icon .select-icon-inner {
+    left: 5px;
+    top: 50%;
+    margin-top: -2px;
+    position: absolute;
+    min-height: 10px;
+    width: 0;
+    height: 0px;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: #111;
+    pointer-events: none;
+}
+.accountdropdown{
+    background-color: #64a4e4;
+}
+.item-ios.item-block .item-inner {
+    padding-right: 8px;
+    padding-right: 8px;
+    border-bottom: none;
+}
+.textinputlabel{
+    color: grey;
+    font-size: 12px;
+}
+.button-inner {
+    color: white;
+}
+ .Custom-item.item-block {
+    background: none !important;
+}
+.btn1{
+    
+    margin-top: 15px;
+    height: 57px;
+    background-color: transparent;
+    /* border-bottom-color: transparent; */
+    /* border-bottom: none; */
+    box-shadow: none;
+    
+}
+.item-md.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: 0px !important;
+}
+.btnimg{
+    padding: 4px;
+}
+
+.Custom-radio{
+    height: 40px;
+    width: 80%;
+    margin: auto;
+}
+
+.Cardicon{
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.Custom-rad{
+    vertical-align: middle;
+}
+
+.Custom-CardRowR{
+    text-align: left;
+}
+.Custom-CardRowL{
+    text-align: right;
+    margin-left: -14px;
+}
+
+.CRow{
+    padding-top: 9px;
+}
+.toolbar-background-md {
+    border-color: #b2b2b2;
+ background:none;
+}
+.item-inner{
+    padding-left: 10px;
+}
+.validation-style{
+    color:white;
+    text-align: center;
+}
+.item-input ion-input, .item-input ion-textarea {
+    position: static;
+    font-size: 15px;
+}
+
+}
+.main-div{
+
+    text-align: center;
+    font-family: 'Averta Standard Regular';
+    }
+    .alertimage{
+      width: 20px;
+      vertical-align: text-bottom;
+    }
+    .p-alert{
+      color: #a9a9a9;
+      font-family: 'Averta Standard Regular';
+    }
+    .bordertop{
+      width: 100%;
+      border-top: 1px solid #ddd;
+    }
+    
+    .page-go-sign .popover-content{
+      top: 40vh !important;
+      position: absolute;
+      left: 10% !important;
+      right: 10%;
+      width: 80% !important;
+    }

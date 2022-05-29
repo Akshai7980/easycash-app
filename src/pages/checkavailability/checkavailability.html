@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="UserCheck">USER VALIDATION</ion-title>
+    <ion-title *ngIf="!UserCheck">Check Availability</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="Bg">
+<div class="AmtAvail">
+  <!-- user check -->
+  <div *ngIf="UserCheck && !Step1 && !Step2">
+  <p class="AboveTxt">User Id</p>
+  <ion-input type="number" class="CheckA"></ion-input>
+  <div>
+      <img src="assets/imgs/checkvalidation.png" class="proceed" (click)="CheckAvailability()">
+  </div>
+  </div>
+  <!--  -->
+
+   <!-- step1 -->
+   <div *ngIf="!UserCheck && Step1 && !Step2">
+   <p class="AboveTxt">Amount</p>
+   <ion-input type="number" class="CheckA"></ion-input>
+  <div>
+      <img src="assets/imgs/check.png" class="proceed" (click)="AmountCheck()">
+  </div>
+  </div>
+   <!--  -->
+
+   <!-- step2 -->
+   <div *ngIf="!UserCheck && !Step1 && Step2">
+   <p class="AvailText">Request Amount Available</p>
+   <img (click)="OtpCheck()" src="assets/imgs/availablegreen.png" class='GreenLight'>
+  <div>
+      <img src="assets/imgs/20.png" class="proceed" (click)="proceed()">
+  </div>
+  </div>
+   <!--  -->
+  </div>
+</ion-content>

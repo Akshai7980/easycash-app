@@ -1,0 +1,149 @@
+<ion-header class="regheader">
+
+  <ion-navbar>
+    <ion-title class="regtxt">Register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="regcontent">
+
+    <form [formGroup]="formgroup" (ngSubmit)="gotologin()"> 
+
+  <div class="position">
+      <img src='assets/imgs/4.png' class="logoimg"/>
+
+      <ion-item class="accountdropdown">
+          <ion-label class="account-label">Account</ion-label>
+
+          <ion-select   formControlName="user_type">
+            <ion-option value="Provider">Provider</ion-option>
+            <ion-option value="Beneficiary">Beneficiary</ion-option> 
+          </ion-select>
+        </ion-item>
+
+        <div *ngIf="FormSubmit">
+            <p class="validation-style" *ngIf="user_type.hasError('required')">Account Name Required</p>
+         </div>
+
+         <div *ngIf="!FormSubmit"> 
+            <p class="validation-style" *ngIf="user_type.hasError('required') && user_type.touched">Account Name Required</p>
+        </div>
+
+            <ion-item>
+              <ion-input placeholder="Name" formControlName="name" type="text"  ></ion-input>
+            </ion-item>
+
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="name.hasError('required')">Name Required</p>
+             </div>
+
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="name.hasError('required') && name.touched">Name Required</p>
+            </div>
+
+            <ion-item>
+                
+              <ion-input placeholder="Account Number" formControlName="accountnumber" type="text"   id="input" ></ion-input>
+            </ion-item>
+
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="accountnumber.hasError('required')">Account Number Required</p>
+             </div>
+
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="accountnumber.hasError('required') && accountnumber.touched">Account Number Required</p>
+            </div>
+
+            <ion-item>
+              <ion-input placeholder="ATM Card Number" formControlName="atmnumber" type="Number"   id="input" ></ion-input>
+            </ion-item>
+
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="atmnumber.hasError('required')">ATM Card Number Required</p>
+                <p class="validation-style" *ngIf="atmnumber.value !='' && atmnumber.value.length != 16  ">Invalid ATM Number</p>
+             </div>
+
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="atmnumber.hasError('required') && atmnumber.touched">ATM Card Number Required</p>
+            </div>
+
+            <div class="Custom-radio">
+              <ion-row class="CRow">
+                <ion-col class="Custom-CardRowL">
+                    <input formControlName="cardtype"  value="MasterCard" class="Custom-rad" type="radio" item-start/>
+                    <img class="Cardicon" src="assets/imgs/5.png">
+                </ion-col>
+
+                <ion-col   class="Custom-CardRowR">
+                    <input formControlName="cardtype"  value="VisaCard" class="Custom-rad" type="radio" item-start/>
+                    <img class="Cardicon" src="assets/imgs/6.png">
+                </ion-col>
+
+              </ion-row>
+
+            </div>
+
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="cardtype.hasError('required')">Card Type Required</p>
+             </div>
+
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="cardtype.hasError('required') && cardtype.touched">Card Type Required</p>
+            </div>
+            
+            <ion-item>
+            <ion-input placeholder="Branch" formControlName="branch" type="text"   id="input" ></ion-input>
+            </ion-item>
+
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="branch.hasError('required')">Branch Required</p>
+             </div>
+
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="branch.hasError('required') && branch.touched">Branch Required</p>
+            </div>
+            
+            <ion-item>
+                
+              <ion-input placeholder="Phone Number" formControlName="phone" type="Number"  id="input" ></ion-input>
+            </ion-item>
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="phone.hasError('required')">Phone Number Required</p>
+             </div>
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="phone.hasError('required') && phone.touched">Phone Number Required</p>
+            </div>
+            <ion-item>
+                
+              <ion-input  placeholder="Email" formControlName="email" type="email"  id="input" ></ion-input>
+            </ion-item>
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="email.hasError('required')">Email Required</p>
+                <p class="validation-style" *ngIf="email.value !='' &&  CheckEmail(email.value)">Email not valid</p>
+             </div>
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="email.hasError('required') && email.touched">Email Required</p>
+                <!-- <p class="validation-style" *ngIf="email.value !='' && CheckEmail(email.value)">Email not valid</p> -->
+                
+            </div>
+            <ion-item>
+               
+              <ion-input placeholder="Password" formControlName="password" type="Password"  id="input" ></ion-input>
+            </ion-item>
+            <div *ngIf="FormSubmit">
+                <p class="validation-style" *ngIf="password.hasError('required')">Password Required</p>
+             </div>
+             <div *ngIf="!FormSubmit"> 
+                <p class="validation-style" *ngIf="password.hasError('required') && password.touched">Password Required</p>
+            </div> 
+
+             <button  type="submit"  class="btn1" ion-button>
+                <img  class="btnimg" src='assets/imgs/7.png'/>
+             </button>
+                   
+  </div>
+</form>
+
+</ion-content>

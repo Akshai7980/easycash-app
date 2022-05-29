@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary" class="navbar_wrapper" hideBackButton align-title="center">
+      <ion-buttons left >
+          <button ion-button icon-only (click)="goback()">
+                  <img class="back" src='assets/imgs/backButton.png'/>
+          </button>
+      </ion-buttons> 
+    <ion-title>My Notification</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let item of getvalues">
+
+    <ion-item>
+      <div class="content-div-card-avatar" [ngStyle]="{'background-image': 'url('+item.image+')'}" item-start>
+
+      </div>
+      <h2 class="content-div-card-h2">{{item.name}}</h2>
+      <p class="content-div-card-p"><span class="content-div-card-p-span">Pick Up Address : </span>{{item.company.catchPhrase}}</p>
+      <button (click)="gotoUserVal()" class="content-div-card-Accept-btn" ion-button item-end>
+          Accept
+      </button>
+      <button (click)="gotoUserVal()" class="content-div-card-Reject-btn" ion-button item-end>
+        Reject
+      </button>
+
+    </ion-item>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,95 @@
+page-chat {
+
+    body {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 0 20px;
+      }
+      
+      .container {
+       
+        border-radius: 5px;
+        padding: 5px;
+        margin: 0px 0;
+      }
+      
+  
+      
+      .container::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: auto;
+        text-align: center;
+        color: #424242;
+        margin-right: 15%;
+    }
+      .container img {
+        float: left;
+        max-width: 50px;
+        height: 50px;
+        width: 100%;
+        margin-right: 5px;
+        border-radius: 50%;
+      }
+      
+      .container img.right {
+        float: right;
+        margin-left: 5px;
+        margin-right:0;
+      }
+     .footer-textarea{
+        float: left;
+        width: 91%;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+     }
+     .footer-send-button{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 14px; 
+     }
+      .time-right {
+        float: right;
+        color: #6b6b6b;
+      }
+      .text-chat-left{
+        background-color: #5ccdf5;
+        width: fit-content;     
+        padding-left: 10px;
+        padding-right: 10px;
+          margin-top: 7px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        vertical-align: middle;
+        padding-top: 7px;
+        padding-bottom: 5px;
+        float: left;
+        max-width: 70%;
+      }
+      .text-chat-right{
+        background-color: #efd7d7;       
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        vertical-align: middle;
+        padding-top: 7px;
+        margin-top: 7px;
+        text-align: right;
+        width: fit-content;
+        float: right;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        max-width: 70%;
+      }
+      .time-left {
+        float: left;
+        color: #999;
+      }
+
+}

@@ -1,0 +1,21 @@
+page-countrypopover {
+
+  ion-list{
+    margin: 0px !important;
+  }
+  .popover-md .popover-content{
+    top: 44px !important;
+  }
+  .popover-md .popover-content{
+    top: 40px !important;
+    .popover-arrow{
+      display: block !important;
+    }
+  }
+  .popover-ios .popover-content{
+    top: 40px !important;
+    .popover-arrow{
+      display: block !important;
+    }
+  }
+}

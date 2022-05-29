@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ConfirmpopoverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+<div class="PinContent">
+  <p>Enter Your Confirmation ID</p>
+  <form [formGroup]="formgroup" (ngSubmit)="Login()">
+      <ion-input formControlName="conformation" placeholder="* * * *" type="password" maxlength='4'></ion-input>
+      <div *ngIf="FormSubmit">
+          <p class="validation-style" *ngIf="conformation.hasError('required')">Confirmation required.Check your Mail</p>
+       </div>
+       <div *ngIf="!FormSubmit"> 
+          <p class="validation-style" *ngIf="conformation.hasError('required') && conformation.touched">Confirmation required.Check your Mail</p>
+      </div>
+
+        <button class="btnstyle" type="submit">
+            <img src="assets/imgs/login.png" class="Login">
+        </button>
+         
+     
+  </form>
+  
+  </div>
+</ion-content>

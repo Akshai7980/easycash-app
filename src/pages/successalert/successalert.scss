@@ -1,0 +1,31 @@
+page-successalert {
+  .CustomClose{
+    position: absolute;
+      right: 8px;
+      color: grey;
+      top: 3px;
+      font-size: 22px;
+  }
+
+  .Success{
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    padding-top: 22px;
+}
+
+.Title{
+  font-size: 25px;
+  margin: auto;
+  color: black;
+  font-weight: 600;
+}
+
+.pBody{
+  margin: auto;
+  padding-top: 5px;
+  font-size: 21px;
+  color: grey;
+}
+
+}

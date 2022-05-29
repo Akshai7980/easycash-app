@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{touserdetails.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    
+  <div *ngFor="let msg of chatMessage">
+  <!-- send -->
+  <div *ngIf="msg.sentby != userdata.id" class="container">
+    <img *ngIf="touserdetails.photo == '' || touserdetails.photo==null" src="../../assets/imgs/pp.jpg"  style="width:100%">
+    <img *ngIf="touserdetails.photo != '' && touserdetails.photo!=null" src="https://easycash.ng/uploads/userphotos/{{touserdetails.photo}}"  style="width:100%">
+    <p class="text-chat-left">{{msg.message}} <br><span class="time-right">{{msg.timeago}}</span></p>
+  </div>
+  <!--  -->
+  
+  <!-- received -->
+  <div *ngIf="msg.sentby == userdata.id" class="container darker">
+    <img class="right" *ngIf="userdata.photo == '' || userdata.photo==null" src="../../assets/imgs/pp.jpg"  style="width:100%">
+    <img class="right" *ngIf="userdata.photo != '' && userdata.photo!=null" src="https://easycash.ng/uploads/userphotos/{{userdata.photo}}"  style="width:100%">
+    <p class="text-chat-right">{{msg.message}}  <br><span class="time-right">{{msg.timeago}}</span></p>
+  </div>
+  <!--  -->
+  
+</div>
+<ion-fab *ngIf="showfab==true" right bottom>
+    <button (click)="scrolldown()" ion-fab color="light"><ion-icon name="arrow-dropdown"></ion-icon></button>
+    </ion-fab>
+  
+</ion-content>
+<ion-footer padding>
+	<form [formGroup]="chatForm" (ngSubmit)="sendChatMessage()">	
+		<ion-textarea class="footer-textarea" type="text" #sendInput formControlName="messageInput" placeholder="start typing..."></ion-textarea>
+		<ion-buttons end>
+			<button class="footer-send-button" ion-button clear type="submit" [disabled]="chatForm.controls['messageInput'].value === ''"><ion-icon name="ios-send" style="zoom:2.0;"></ion-icon></button>
+		</ion-buttons>
+	</form>
+</ion-footer>

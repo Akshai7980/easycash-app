@@ -1,0 +1,37 @@
+page-mynotification {
+    .content-div-card-avatar{
+        height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-size: cover; 
+    }
+    .content-div-card-h2{
+        width: 62%;
+        font-size: 11px !important;
+        white-space: initial;
+    }
+ 
+    .content-div-card-p{
+        font-size: 9px !important;
+    }
+    .content-div-card-p-span{
+color: #00a8e2;
+    }
+    .content-div-card-Accept-btn{
+       background-color: #00a8e2;
+       font-size: 9px !important;
+    }
+    .content-div-card-Reject-btn{
+        background-color: #535353;
+        font-size: 9px !important;
+     }
+     .content-div-card-Reject-btn .activated{
+        background-color: #535353;
+     }
+    .toolbar-background-ios {
+        background: none;
+    }
+    ion-title {
+        text-align: center;
+      }
+}

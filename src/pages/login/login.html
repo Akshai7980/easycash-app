@@ -1,0 +1,45 @@
+<ion-content padding class="full-loginpage">
+    <form [formGroup]="formgroup"> 
+  <div class="position">
+      <img src='assets/imgs/4.png' class="logoimg"/>
+  </div>
+  
+<div class="space-btwn-box">
+  <ion-item class="textbox-align1" > 
+    
+      <ion-label class="textinputlabel">
+          <img src="assets/imgs/man.png" class="manimage"/>
+      </ion-label>
+    <ion-input formControlName="email" class="input-placeholder" placeholder="Email or Phone Number" type="text"  id="input" ></ion-input>
+  </ion-item>    
+  <div *ngIf="FormSubmit">
+        <p class="validation-style" *ngIf="email.hasError('required')">Email Required</p>
+        <p class="validation-style" *ngIf="email.value !='' &&  CheckEmail(email.value)">Email not valid</p>
+     </div>
+       <div *ngIf="!FormSubmit"> 
+          <p class="validation-style" *ngIf="email.hasError('required') && email.touched">Email Required</p>
+      </div>
+    </div>
+    <div>
+  <ion-item class="textbox-align2"> 
+      <ion-label class="textinputlabel">
+          <img src="assets/imgs/padlock.png" class="manimage"/>
+      </ion-label>
+    <ion-input formControlName="password" type="password" class="input-placeholder" placeholder="Password" id="input" ></ion-input>
+  </ion-item>  
+  <div *ngIf="FormSubmit"> 
+  <p class="validation-style" *ngIf="password.hasError('required')">Password Required</p>
+  </div>
+  <div *ngIf="!FormSubmit"> 
+      <p class="validation-style" *ngIf="password.hasError('required') && password.touched">Password Required</p>
+  </div>
+</div>
+  <p class="forgotpass">Forgot Password?</p>
+
+  <img (click)="gologin()" src='assets/imgs/signin.png' class="signin-image"/>
+
+  <p class="newaccount">Don't have any account?  <span (click)="gosignup()" class="color-up">Sign Up</span></p>
+
+</form>
+
+</ion-content>

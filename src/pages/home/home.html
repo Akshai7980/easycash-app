@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar>
+        <!-- <ion-buttons left >
+            <button ion-button icon-only (click)="goback()">
+                    <img class="back" src='assets/imgs/backButton.png'/>
+            </button>
+        </ion-buttons>  -->
+        <ion-title (click)="CountryPopover()">Nigeria<ion-icon class="CountryArrow" name="ios-arrow-down"></ion-icon></ion-title>
+      </ion-navbar>
+      <ion-toolbar>
+            <div class="TopContent">
+              <p class="BalText">Your Balance</p>
+              <p class="BalAmount">2894.36</p>
+             </div>
+            <div class="center-div">
+              <ion-grid class="center-div-grid">
+                  <ion-row>
+                      <ion-col class="center-div-col center-div-col-margin-right">
+                        <img class="center-div-col-img" src="assets/imgs/8.png">
+                        <p class="center-div-col-p">SEND</p>
+                      </ion-col>
+                      <ion-col class="center-div-col">
+                          <img class="center-div-col-img" src="assets/imgs/9.png">
+                          <p class="center-div-col-p">MY BALANCE</p>
+                      </ion-col>
+                      <ion-col class="center-div-col center-div-col-margin-left">
+                          <img class="center-div-col-img" src="assets/imgs/10.png">
+                          <p class="center-div-col-p">RECIEVE</p>
+                      </ion-col>
+                    </ion-row>
+              </ion-grid>
+             
+            </div>
+        </ion-toolbar>
+</ion-header>
+
+<ion-content class="homeBg">
+
+<div class="lower-list-view-div">
+  <P class="lower-list-view-div-heading" *ngIf="getvalues!=''">PROVIDERS AROUND ME</P>
+  <P class="lower-list-view-div-heading" *ngIf="getvalues==''">No provideres available here</P>
+        <ion-card (click)="gotonotification(item)" *ngFor="let item of getvalues">
+
+            <ion-item>
+              <div class="lower-list-view-div-card-avatar" *ngIf="item.photo!='' && item.photo!=null" [ngStyle]="{'background-image': 'url(https://easycash.ng/uploads/userphotos/'+item.photo+')'}" item-start>
+               
+              </div>
+              <div class="lower-list-view-div-card-avatar" *ngIf="item.photo=='' || item.photo==null" [ngStyle]="{'background-image': 'url(../assets/imgs/pp.jpg)'}" item-start>
+               
+              </div>
+              <h2 class="lower-list-view-div-card-h2">{{item.name}}</h2>
+              <p>{{item.phone}}</p>
+              <p  class="lower-list-view-div-distance"><span><img class="lower-list-view-div-distance-image" src="assets/imgs/11.png"/></span>{{item.distance | round:4}} Km away</p>
+            </ion-item>
+          
+         
+          </ion-card>
+       
+      
+     
+     
+      
+  
+   
+</div>
+</ion-content>
+
+

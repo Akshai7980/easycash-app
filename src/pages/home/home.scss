@@ -1,0 +1,139 @@
+page-home {
+  ion-title{
+    text-align: center;
+  }
+ 
+  .homeBg{
+    background-image: url("../assets/imgs/3.png") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  }
+  .header::after, .tabs[tabsPlacement="top"] > .tabbar::after, .footer::before, .tabs[tabsPlacement="bottom"] > .tabbar::before{
+background-image: none !important;
+  }
+  .toolbar-background{
+    background: transparent !important;
+    border: none !important;
+  }
+  .center-div-col-p{
+    margin: 0px ;
+    margin-top: 10px !important;
+  }
+  .center-div-grid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .back{
+height: 20px;
+  }
+  .lower-list-view-div-distance{
+    margin-top: 0px;
+    color: #30afe2;
+    position: absolute;
+    top: 6px;
+    width: 112px;
+    right: 0px;
+  }
+  .lower-list-view-div-distance-image{
+    width: 15px;
+    margin-right: 4px;
+    height: 15px;
+    float: left;
+  }
+  .lower-list-view-div-card-h2{
+    width: 62%;
+    white-space: initial;
+  }
+  
+  .lower-list-view-div-card-avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: cover;
+  }
+  .toolbar {
+    padding-left: 0px !important;
+    padding-right: 0px !important; 
+  
+  }
+  .lower-list-view-div{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+  .lower-list-view-div-heading{
+    margin-top: 0px !important;   
+    padding-left: 10px;
+    color: #6d6a6a;
+  }
+  
+.center-div-col{  
+  background-color: rgba($color: #fff, $alpha: 0.34);
+  text-align: center;
+  color: #fff;
+  padding-top: 10px ;
+}
+.center-div-col-margin-left{
+margin-left: 4px !important;
+}
+.center-div-col-margin-right{
+  margin-right: 4px !important;
+  }
+.center-div-col-img{
+  height: 25px;
+}
+.lower-list-view-div{
+  background-color: #fff !important;
+  min-height: 65vh;
+}
+  .popover-content {
+    top: 40px !important;
+    left: 87.5px !important;
+    transform-origin: left top 0px !important;
+  }
+
+  .CountryArrow{
+    position: relative;
+    top: 3px;
+    left: 20px;
+    color: white;
+  }
+
+  .toolbar-title{
+    color: white;
+  }
+
+  .BalText{
+    color: white;
+    font-size: 18px;
+  }
+
+  .TopContent{
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .BalAmount{
+    font-size: 40px;
+    color: white;
+    margin-top: 0px;
+  }
+
+  .popover-arrow{
+    display: block !important;
+    top: 30px !important;
+    }
+
+    .popover-content{
+      top: 38px !important;
+    }
+
+
+}
+// .popover-md .popover-content{
+//   // top: 44px !important;
+// }
+// .popover-ios .popover-content{
+//   // top: 44px !important;
+// }

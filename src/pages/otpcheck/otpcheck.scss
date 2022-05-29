@@ -1,0 +1,31 @@
+page-otpcheck {
+
+  .PinContent {
+    text-align: center;
+    padding-top: 25px;
+    margin: auto;
+    width: 80%;
+    p{
+      font-size: 20px;
+      color: black;
+      margin: auto;
+    }
+  }
+.proceed{
+  height: 75px;
+  width: auto;
+  margin-top: 15px;
+}
+
+.CustomClose{
+  position: absolute;
+    right: 8px;
+    color: grey;
+    top: 3px;
+    font-size: 22px;
+}
+
+.CItm{
+  margin-top: -3px !important;
+}
+}

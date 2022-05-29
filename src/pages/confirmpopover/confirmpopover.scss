@@ -1,0 +1,38 @@
+page-confirmpopover {
+.PinContent {
+  text-align: center;
+  padding-top: 30px;
+  margin: auto;
+  width: 80%;
+  p{
+    font-size: 15px;
+    color: black;
+  }
+
+  img{
+    height: 40px;
+    width: auto;
+    margin-top: 15px;
+  }
+
+  .btnstyle{
+    background: transparent;
+  }
+  .validation-style{
+    color:black;
+    text-align: center;
+}
+  ion-input{
+   
+    input {
+      text-align: center !important;
+      width: 70% !important;
+      height: 30px !important;
+      margin: auto !important;
+      border: .50px solid #23c9f6 !important;
+      font-size: 15px !important;
+    }
+  }
+}
+
+}
